@@ -1,0 +1,24 @@
+﻿@using VideoViewer.Models;
+@using VideoViewer.Infrastructure;
+@{
+  ViewBag.Title = "Index";
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Content/js/custom/watch.js"></script>
+
+<form name="form" ng-controller="WatchCtrl" novalidate style="padding-left:200px;padding-right:200px;">
+  <h3 style="font-weight:700">@Model.Title</h3>
+  <br /><br />
+  <iframe width="1000"
+          height="500"
+          src="https://www.youtube.com/embed/fxCEcPxUbYA"
+          frameborder="0"
+          allowfullscreen></iframe>
+  <br /><br />
+  @Model.VideoUrl
+  <br /><br />
+  <h4 style="font-weight:700"> @Model.Description </h4>
+  <br />
+  <h6> @Model.Tags </h6>
+</form>

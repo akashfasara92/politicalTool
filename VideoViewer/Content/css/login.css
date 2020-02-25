@@ -1,0 +1,173 @@
+﻿.logo-img {
+    left: 5%;
+    position: absolute;
+    z-index: 11;
+    top: 4rem;
+    width: 200px;
+}
+.form-input {
+    max-width: 400px;
+}
+.input-content {
+    margin-bottom: 20px;
+    max-height: 70px;
+    width: 100%;
+}
+.input-box {
+    border-radius: 7px;
+    border: 2px solid #2f449c;
+    color: #172b70;
+    font-size: 18px;
+    padding: 22px 18px 20px;
+    width: 100%;
+    background: #ffffff;
+    outline: none !important;
+}
+.login-btn{
+    background: #2b44a6;
+    border-radius: 7px;
+    border: 1px solid #2f449c;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 18px;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    text-align: center;
+    text-decoration: none !important;
+    outline: none;
+    max-width: 220px;
+    margin: auto;
+}
+.login-btn:hover {
+    background: #2f78e9;
+    border-color: #2f78e9;
+    color:#fff !important;
+}
+.forget-txt {
+    color: #2b44a6 !important;
+    text-decoration: none !important;
+    font-size: 18px;
+}
+.border-style {
+    max-width: 65px;
+    margin: 7px auto 0;
+    border: 2px #2b44a6;
+    border-style: dashed;
+    border-radius: 100px;
+    position: relative;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Password Show Css */
+.password-block{
+    position: absolute;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -68px;
+    margin-top: 3px;
+    cursor: pointer;
+    color: #2f439b;
+}
+@media only  screen and (max-width:1600px){
+    .password-block{
+        width: 60px;
+	    height: 67px;
+	    font-size: 18px;
+    }
+}
+@media only  screen and (min-width:1601px){
+    .password-block{
+        width: 66px;
+	    height: 66px;
+	    font-size: 22px;
+    }
+}
+
+/* Login Vector Image css */
+.vector1{
+	position: absolute;
+    right: 4rem;
+    bottom: 8rem;
+}
+.vector2{
+	position: absolute;
+    bottom: -42px;
+    left: 5rem;
+}
+.main-img{
+	max-width: 50rem;
+	position: relative;
+}
+.shape1{
+	position: absolute;
+    top: 7%;
+    left: 4rem;
+}
+.shape2{
+	position: absolute;
+    top: 15%;
+    left: 0;
+}
+.shape3{
+	bottom: 2rem;
+    left: 0;
+}
+.shape4{
+	top: 0;
+    right: 0;
+}
+.shape5{
+	bottom: 7rem;
+    right: 3rem;
+    opacity: 0.1;
+}
+.shape6{
+	bottom: -4rem;
+    right: -2rem;
+}
+
+.left-block{
+	background-image: url(../images/background.png);
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: relative;
+}
+.left-block:before{
+	content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg-before.png);
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* Color css */
+.bg-lightblue{
+	background: #EEF1F8;
+}
+
+/*--Media Css--*/
+@media only  screen and (min-width:768px) and (max-width:1450px) {
+	.main-img{
+		max-width: 30rem;
+	}
+}
+@media only  screen and (max-width:1199px) {
+	.loginform{
+		max-width: 330px !important;
+	}
+}

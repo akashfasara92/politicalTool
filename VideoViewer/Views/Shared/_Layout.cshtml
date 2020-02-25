@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html ng-app="AngularApp">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@ViewBag.Title - Video</title>
+
+  @Styles.Render("~/Content/fonts/font/css/all.css")
+  @Styles.Render("~/Content/fonts/font-awesome/css/font-awesome.css")
+  @Styles.Render("~/Content/css/angucomplete-alt.css")
+  @Styles.Render("~/Content/css/ng-table.min.css")
+  @Styles.Render("~/Content/css/isteven-multi-select.css")
+  @Styles.Render("~/Content/css/toastr.min.css")
+  @Styles.Render("~/Content/css/main.css")
+  @Styles.Render("~/Content/css/custom.css")
+  @Styles.Render("~/Content/css/font-popp.css")
+  @Styles.Render("~/Content/css/sweetalert2.css")
+  @Styles.Render("~/Content/css/select2.min.css")
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  @Styles.Render("~/Content/css/bootstrap-material-datetimepicker.css")
+
+  @Scripts.Render(" ~/Content/js/jquery-1.10.2.min.js")
+  @Scripts.Render("~/Content/js/bootstrap.min.js")
+  @Scripts.Render("~/Content/js/angular.min.js")
+  @Scripts.Render("~/Content/js/main.js")
+  @Scripts.Render("~/Content/js/select2.full.min.js")
+  @Scripts.Render("~/Content/js/ng-table.min.js")
+  @Scripts.Render("~/Content/js/angucomplete-alt.js")
+  @Scripts.Render("~/Content/js/angular-route.min.js")
+  @Scripts.Render("~/Content/js/isteven-multi-select.js")
+  @Scripts.Render("~/Content/js/custom/utils.js")
+  @Scripts.Render("~/Content/js/custom/route.js")
+  @Scripts.Render("~/Content/js/JSLINQ.js")
+  @Scripts.Render("~/Content/js/sweetalert2.min.js")
+  @Scripts.Render("~/Content/js/toastr.min.js")
+  @Scripts.Render("~/Content/js/perfect-scrollbar.jquery.min.js")
+  @Scripts.Render("~/Content/directives/select2.js")
+  @Scripts.Render("~/Content/js/ui-bootstrap-tpls-0.13.4.min.js")
+  @Scripts.Render("~/Content/js/moment-with-locales.min.js")
+  @Scripts.Render("~/Content/js/bootstrap-material-datetimepicker.js")
+  @Scripts.Render("~/Content/js/custom/app.js")
+</head>
+<body class="menu-position-side menu-side-left full-screen">
+  @*loader content*@
+  <div class="loader-section" id="loader1" style="display:none;">
+    <div class="grid">
+      <div load="circle primary"></div>
+      <div load="circle warning"></div>
+      <div load="circle danger"></div>
+      <div load="circle info"></div>
+    </div>
+  </div>
+  @*loader content*@
+  <div class="all-wrapper solid-bg-all">
+    <div class="search-with-suggestions-w" style="display:none;">
+      <div class="search-with-suggestions-modal">
+        <div class="element-search">
+          <input class="search-suggest-input" placeholder="Start typing to search..." type="text">
+          <div class="close-search-suggestions">
+            <i class="os-icon os-icon-x"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layout-w wrapper content isOpen">
+      <!-------------------- START - Mobile Menu -------------------->
+      <div class="menu-mobile menu-activated-on-click color-scheme-dark">
+        <div class="mm-logo-buttons-w" style="padding-right: 1700px;">
+          <a class="mm-logo" href="#"><img src="~/Content/images/logo.png"></a>
+          <div class="top-bar color-scheme-light MOB-Usericon">
+            <div class="top-menu-controls">
+              <div class="logged-user-w">
+                <div class="logged-user-i">
+                  <div class="avatar-w">
+                    <img alt="" src="~/Content/images/userwhite.png">
+                  </div>
+                  <div class="logged-user-menu color-style-bright">
+                    <div class="logged-user-avatar-info">
+                      <div class="avatar-w">
+                        <img alt="" src="~/Content/images/userwhite.png">
+                      </div>
+                      <div class="logged-user-info-w">
+                        <div class="logged-user-name">
+                          @*@lblUserName*@
+                        </div>
+                        <div class="logged-user-role">
+                          @*@lblUserRoleName*@
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-icon">
+                      <i class="os-icon os-icon-wallet-loaded"></i>
+                    </div>
+                    <ul>
+                      <li>
+                        <a href="#" class="position-relative"><i class="os-icon os-icon-signs-11"></i><span>Logout</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mm-buttons">
+            <div class="content-panel-open">
+              <div class="os-icon os-icon-grid-circles"></div>
+            </div>
+            <div class="mobile-menu-trigger">
+              <div class="os-icon os-icon-hamburger-menu-1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-------------------- END - Mobile Menu -------------------->
+      <div class="content-w">
+        <!-------------------- START - Top Bar -------------------->
+        <div class="top-bar color-scheme-light Desk-Usericon">
+          @*<div class="header-label">
+              <h5 class="label-name"  style="float:left">@ViewBag.Title</h5>
+            </div>*@
+          <div class="top-menu-controls">
+            <div class="mm-logo-buttons-w" style="padding-right: 1700px;">
+              <a class="mm-logo" href="#"><img src="~/Content/images/logo.png" height="30px;"></a>
+            </div>
+            <div class="logged-user-w">
+              <div class="logged-user-i">
+                <div class="avatar-w">
+                  <img alt="" src="~/Content/images/user.png">
+                </div>
+                <div class="logged-user-menu color-style-bright">
+                  <div class="logged-user-avatar-info">
+                    <div class="avatar-w">
+                      <img alt="" src="~/Content/images/user.png">
+                    </div>
+                    <div class="logged-user-info-w">
+                      <div class="logged-user-name" id="divUserName">
+                      </div>
+                      <div class="logged-user-role" id="divUserRoleName">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-icon">
+                    <i class="os-icon os-icon-wallet-loaded"></i>
+                  </div>
+                  <ul>
+                    <li>
+                      <a href="/user/signout" class="position-relative"><i class="os-icon os-icon-signs-11"></i><span>Logout</span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-------------------- END - Top Bar -------------------->
+        <!-------------------- START - Main Content -------------------->
+        <div class="main-body">
+          <div class="content-i">
+            <div class="content-box">
+              <div class="col-lg-12 p-0">
+                <div class="element-wrapper">
+                  @*<div class="element-box">*@
+                  @RenderBody()
+                  @*</div>*@
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-------------------- END - Main Content -------------------->
+      </div>
+    </div>
+    <div class="display-type"></div>
+  </div>
+
+  @RenderSection("scripts", required: false)
+</body>
+</html>
+<style>
+  .menu-content {
+    height: 0px !important;
+  }
+</style>
+
+@* Render Swal notification *@
+<script type="text/javascript">
+    @if (TempData["SwalNotification"] != null)
+    {
+        @Html.Raw(TempData["SwalNotification"])
+    }
+</script>
+
+@*Tab Select Drop Down*@
+<script type="text/javascript">
+  $(document).on('focus', '.select2', function (e) {
+    if (e.originalEvent) {
+      $(this).siblings('select').select2('open');
+    }
+  });
+</script>
+
+<script>
+  $(document).ready(function () { $("input").attr("autocomplete", "off"); });
+</script>
+
+@*Special Charecter And Space Not Allow*@
+<script type="text/javascript">
+  function blockSpecialChar(e) {
+    var k = e.keyCode;
+    return ((k > 64 && k < 91) || (k > 96 && k < 123) || k === 8 || (k >= 48 && k <= 57));
+  }
+</script>
+
+@* Fancy Selector *@
+<script type="text/javascript">
+  $('.fs-selector-trigger').on('click', function () {
+    $(this).closest('.fancy-selector-w').toggleClass('opened');
+    if ($(this).closest('.fancy-selector-w').hasClass("opened")) {
+      $(this).closest('.fancy-selector-w').removeClass('opened');
+    }
+    else {
+      $(this).closest('.fancy-selector-w').addClass('opened');
+    }
+  });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("input").not($(":button")).keypress(function (evt) {
+      if (evt.keyCode == 13) {
+        iname = $(this).val();
+        if (iname !== 'Submit') {
+          var fields = $(this).parents('form:eq(0),body').find('button, input, textarea, select, span');
+          var index = fields.index(this);
+          if (index > -1 && (index + 1) < fields.length) {
+            fields.eq(index + 1).focus();
+          }
+          return false;
+        }
+      }
+    });
+  });
+</script>
